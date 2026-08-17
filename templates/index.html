@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Prediction</title>
+
+    <link
+        rel="stylesheet"
+        href="../static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="page-container">
+
+        <div class="card">
+
+            <!-- ==================================================
+                 Header
+                 ================================================== -->
+
+            <div class="header">
+
+                <h1>Student Performance Prediction</h1>
+
+                <p>
+                    Enter the student's details to predict
+                    the exam score.
+                </p>
+
+            </div>
+
+
+            <!-- ==================================================
+                 Prediction Form
+                 ================================================== -->
+
+            <form method="POST">
+
+
+                <!-- Study Hours -->
+
+                <div class="form-group">
+
+                    <label for="study_hours_per_day">
+                        Study Hours per Day
+                    </label>
+
+                    <input
+                        type="number"
+                        id="study_hours_per_day"
+                        name="study_hours_per_day"
+                        min="1"
+                        max="24"
+                        step="0.1"
+                        placeholder="Enter study hours"
+                        required
+                    >
+                </div>
+
+
+                <!-- Social Media Hours -->
+
+                <div class="form-group">
+
+                    <label for="social_media_hours">
+                        Social Media Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="social_media_hours"
+                        name="social_media_hours"
+                        min="1"
+                        max="24"
+                        step="0.1"
+                        placeholder="Enter social media hours"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Netflix Hours -->
+
+                <div class="form-group">
+
+                    <label for="netflix_hours">
+                        Netflix Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="netflix_hours"
+                        name="netflix_hours"
+                        min="0"
+                        max="24"
+                        step="0.1"
+                        placeholder="Enter Netflix hours"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Part Time Job -->
+
+                <div class="form-group">
+
+                    <label for="part_time_job">
+                        Part-Time Job
+                    </label>
+
+                    <select
+                        id="part_time_job"
+                        name="part_time_job"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            Select an option
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Attendance -->
+
+                <div class="form-group">
+
+                    <label for="attendance_percentage">
+                        Attendance Percentage
+                    </label>
+
+                    <input
+                        type="number"
+                        id="attendance_percentage"
+                        name="attendance_percentage"
+                        min="0"
+                        max="100"
+                        step="0.1"
+                        placeholder="Enter attendance percentage"
+                        required
+                    >
+                </div>
+
+
+                <!-- Sleep Hours -->
+
+                <div class="form-group">
+
+                    <label for="sleep_hours">
+                        Sleep Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="sleep_hours"
+                        name="sleep_hours"
+                        min="1"
+                        max="24"
+                        step="0.1"
+                        placeholder="Enter sleep hours"
+                        required
+                    >
+                </div>
+
+
+                <!-- Diet Quality -->
+
+                <div class="form-group">
+
+                    <label for="diet_quality">
+                        Diet Quality
+                    </label>
+
+                    <select
+                        id="diet_quality"
+                        name="diet_quality"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            Select diet quality
+                        </option>
+
+                        <option value="Poor">
+                            Poor
+                        </option>
+
+                        <option value="Fair">
+                            Fair
+                        </option>
+
+                        <option value="Good">
+                            Good
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Exercise Frequency -->
+
+                <div class="form-group">
+
+                    <label for="exercise_frequency">
+                        Exercise Frequency
+                    </label>
+
+                    <input
+                        type="number"
+                        id="exercise_frequency"
+                        name="exercise_frequency"
+                        min="0"
+                        max="7"
+                        step="1"
+                        placeholder="Days per week"
+                        required
+                    >
+
+
+                </div>
+
+
+                <!-- Parental Education -->
+
+                <div class="form-group">
+
+                    <label for="parental_education_level">
+                        Parental Education Level
+                    </label>
+
+                    <select
+                        id="parental_education_level"
+                        name="parental_education_level"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            Select education level
+                        </option>
+
+                        <option value="High School">
+                            High School
+                        </option>
+
+                        <option value="Bachelor">
+                            Bachelor
+                        </option>
+
+                        <option value="Master">
+                            Master
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Internet Quality -->
+
+                <div class="form-group">
+
+                    <label for="internet_quality">
+                        Internet Quality
+                    </label>
+
+                    <select
+                        id="internet_quality"
+                        name="internet_quality"
+                        required
+                    >
+
+                        <option value="" disabled selected>
+                            Select internet quality
+                        </option>
+
+                        <option value="Poor">
+                            Poor
+                        </option>
+
+                        <option value="Average">
+                            Average
+                        </option>
+
+                        <option value="Good">
+                            Good
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Mental Health -->
+
+                <div class="form-group">
+
+                    <label for="mental_health_rating">
+                        Mental Health Rating
+                    </label>
+
+                    <input
+                        type="number"
+                        id="mental_health_rating"
+                        name="mental_health_rating"
+                        min="1"
+                        max="10"
+                        step="1"
+                        placeholder="Rate from 1 to 10"
+                        required
+                    >
+
+
+                </div>
+
+
+                <!-- Submit Button -->
+
+                <button type="submit">
+                    Predict Exam Score
+                </button>
+
+            </form>
+
+
+            {% if prediction%}
+
+            <div class="result">
+
+                <p class="result-title">
+                    Predicted Exam Score
+                </p>
+
+                <h2>
+                    {{ prediction }}
+                </h2>
+
+                <p>
+                    Your predicted exam score is
+                    <strong>{{ prediction }}</strong>.
+                </p>
+
+            </div>
+
+            {% endif %}
+
+            {% if error %}
+
+            <div class="error">
+
+                <strong>Error:</strong>
+                {{ error }}
+
+            </div>
+
+            {% endif %}
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
